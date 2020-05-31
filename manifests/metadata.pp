@@ -50,7 +50,7 @@ define shibboleth::metadata(
     changes => [
       'ins MetadataProvider after Errors',
     ],
-    onlyif  => 'match MetadataProvider/#attribute/uri size == 0',
+    onlyif  => 'match MetadataProvider/#attribute/url size == 0',
     notify  => Service['httpd','shibd'],
   }
 
@@ -64,7 +64,7 @@ define shibboleth::metadata(
     changes => flatten(
       [
         "set MetadataProvider/#attribute/type ${provider_type}",
-        "set MetadataProvider/#attribute/uri ${provider_uri}",
+        "set MetadataProvider/#attribute/url ${provider_uri}",
         "set MetadataProvider/#attribute/backingFilePath ${backing_file}",
         "set MetadataProvider/#attribute/reloadInterval ${provider_reload_interval}",
         $aug_valid_until,
