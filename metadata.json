@@ -1,21 +1,35 @@
 {
-  "name": "Aethylred-shibboleth",
-  "version": "0.1.4",
-  "author": "Aethylred",
+  "name": "jksnapp-shibboleth",
+  "version": "1.1.0",
+  "author": "Joshua-Snapp",
   "license": "Apache-2.0",
   "summary": "A module for installing and managing shibboleth",
-  "source": "https://github.com/Aethylred/puppet-shibboleth",
-  "project_page": "https://github.com/Aethylred/puppet-shibboleth",
-  "issues_url": "https://github.com/Aethylred/puppet-shibboleth/issues",
+  "source": "https://github.com/Joshua-Snapp/puppet-shibboleth",
+  "project_page": "https://github.com/Joshua-Snapp/puppet-shibboleth",
+  "issues_url": "https://github.com/Joshua-Snapp/puppet-shibboleth/issues",
   "tags": ["shibboleth"],
   "operatingsystem_support": [
     {
     "operatingsystem": "Ubuntu",
     "operatingsystemrelease": [ "12.04", "14.04" ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
     }
    ],
   "dependencies": [
-    // { "name": "puppetlabs/stdlib",  "version_requirement": ">=4.2.0 <5.0.0" },
-    // { "name": "puppetlabs/apache",  "version_requirement": "1.0.1" },
+     { "name": "puppetlabs/stdlib",  "version_requirement": ">=4.2.0 <5.0.0" },
+     { "name": "puppetlabs/apache",  "version_requirement": ">=1.11.0" }
   ] 
 }
